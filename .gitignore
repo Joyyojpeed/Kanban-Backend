@@ -1,0 +1,25 @@
+# Ignore node dependencies
+node_modules/
+
+# Ignore dotenv config
+.env
+
+# Ignore logs
+logs
+*.log
+npm-debug.log*
+
+# Ignore OS junk
+.DS_Store
+Thumbs.db
+
+# Ignore editor settings
+.vscode/
+.idea/
+
+# Optional: ignore compiled build files (if you build manually)
+dist/
+build/
+
+# Ignore coverage/test output
+coverage/
