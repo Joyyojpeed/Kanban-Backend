@@ -2,10 +2,15 @@ let ioInstance;
 
 function initSocket(server) {
   const { Server } = require("socket.io");
+
   const io = new Server(server, {
     cors: {
-      origin: process.env.CLIENT_ORIGIN || "http://localhost:5173",
+      origin: [
+        "http://localhost:5173",
+        "https://kanban-frontend-pink-six.vercel.app",
+      ],
       methods: ["GET", "POST", "PUT", "DELETE"],
+      credentials: true,
     },
   });
 
